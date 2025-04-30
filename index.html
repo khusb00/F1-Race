@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Racing Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Formula 1 Racing Championship</h1>
+    
+    <div class="race-controls">
+      <button id="start-race">Start Race</button>
+      <div id="winner-display">Press Start to begin the race!</div>
+    </div>
+    
+    <div class="race-track-container">
+      <!-- Track 1 -->
+      <div class="race-track">
+        <div class="lane-number">1</div>
+        <div class="car car-1">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-s8yEC03BVH2rUfX7b1QxWLJeR03B0w.png" alt="White and Blue F1 Car">
+        </div>
+        <div class="finish-line"></div>
+      </div>
+      
+      <!-- Track 2 -->
+      <div class="race-track">
+        <div class="lane-number">2</div>
+        <div class="car car-2">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-CkyLCXaDFRhcfqsXQoEM8J685n9fL8.png" alt="Black and Gold F1 Car">
+        </div>
+        <div class="finish-line"></div>
+      </div>
+      
+      <!-- Track 3 -->
+      <div class="race-track">
+        <div class="lane-number">3</div>
+        <div class="car car-3">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-5zv5c6OqvmHJq8ersZYjD99hneLPxX.png" alt="Blue and Yellow F1 Car">
+        </div>
+        <div class="finish-line"></div>
+      </div>
+      
+      <!-- Track 4 -->
+      <div class="race-track">
+        <div class="lane-number">4</div>
+        <div class="car car-4">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-LfvFYAR4yQlF1iPgzl711rcrjhfAxK.png" alt="Orange, Yellow and White F1 Car">
+        </div>
+        <div class="finish-line"></div>
+      </div>
+    </div>
+    
+    <div class="car-info">
+      <div class="car-detail">
+        <div class="car-color car-color-1"></div>
+        <span>Team Blue Lightning</span>
+      </div>
+      <div class="car-detail">
+        <div class="car-color car-color-2"></div>
+        <span>Team Black Panther</span>
+      </div>
+      <div class="car-detail">
+        <div class="car-color car-color-3"></div>
+        <span>Team Royal Flash</span>
+      </div>
+      <div class="car-detail">
+        <div class="car-color car-color-4"></div>
+        <span>Team Orange Blaze</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load GSAP from CDN can find google just search Gsap cdn and copy paste the first one -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

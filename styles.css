@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 🎨 Styling the whole page (body) */
+  body {
+    font-family: "Arial", sans-serif; /* Use Arial font for all text */
+    background-color: #121212; /* Dark background for cool look */
+    color: #ffffff; /* Make text white */
+    min-height: 100vh; /* Make body take full height of screen */
+    display: flex; /* Flexbox to center everything */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  /* 📦 Container that wraps all content */
+  .container {
+    width: 90%; /* Take 90% width of the screen */
+    max-width: 1000px; /* But not more than 1000px */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Space inside the container */
+  }
+  
+  /* 🏆 Heading (Title of the page) */
+  h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px; /* Add space below heading */
+    color: #f1c40f; /* Bright yellow color */
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.5); /* Glow effect around text */
+  }
+  
+  /* 🕹️ Race Controls Section (Button + Winner Text) */
+  .race-controls {
+    display: flex; /* Use flexbox to arrange items */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 30px; /* Space below */
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Space between button and text */
+  }
+  
+  /* 🚀 Start Race Button */
+  #start-race {
+    padding: 12px 30px; /* Space inside button */
+    font-size: 18px; /* Bigger text */
+    background-color: #e74c3c; /* Bright red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Smooth round corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth animations */
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3); /* Soft shadow under button */
+  }
+  
+  /* ✨ Start Button Hover Effect */
+  #start-race:hover {
+    background-color: #c0392b; /* Darker red when hovered */
+    transform: translateY(-2px); /* Move button slightly up */
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4); /* Stronger shadow */
+  }
+  
+  /* ⏬ Start Button Active (Clicked) Effect */
+  #start-race:active {
+    transform: translateY(1px); /* Button moves down a little when clicked */
+  }
+  
+  /* 🎉 Winner Display Text */
+  #winner-display {
+    font-size: 20px; /* Big text */
+    font-weight: bold; /* Bold text */
+    color: #2ecc71; /* Green color for success */
+    text-align: center; /* Centered text */
+    min-height: 30px; /* Minimum height so space is reserved */
+  }
+  
+  /* 🏁 Race Track Background */
+  .race-track-container {
+    background-color: #2c3e50; /* Dark blue background */
+    border-radius: 10px; /* Round corners */
+    padding: 20px; /* Space inside the container */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Dark shadow for depth */
+    margin-bottom: 30px; /* Space below track */
+  }
+  
+  /* 🛣️ Each Race Track Lane */
+  .race-track {
+    height: 80px; /* Tall enough for car to fit */
+    background-color: #34495e; /* Slightly lighter blue */
+    margin-bottom: 15px; /* Space between tracks */
+    border-radius: 5px; /* Smooth corners */
+    position: relative; /* So we can absolutely position cars inside */
+    overflow: hidden; /* Hide anything that overflows */
+    display: flex; /* Flexbox inside lane */
+    align-items: center; /* Center car vertically */
+  }
+  
+  /* 🚦 Remove margin from last track */
+  .race-track:last-child {
+    margin-bottom: 0; /* No bottom margin for last lane */
+  }
+  
+  /* 🔢 Lane Numbers */
+  .lane-number {
+    position: absolute; /* Position at left side */
+    left: 10px; /* 10px from left edge */
+    width: 30px;
+    height: 30px;
+    background-color: #f1c40f; /* Yellow background */
+    color: #000; /* Black text */
+    border-radius: 50%; /* Circle shape */
+    display: flex; /* Flexbox to center number */
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Bold number */
+    z-index: 10; /* Appear above cars */
+  }
+  
+  /* 🚗 Car Styling */
+  .car {
+    position: absolute; /* Place cars absolutely inside track */
+    left: 50px; /* Start cars 50px from left */
+    height: 60px; /* Height of car */
+    display: flex;
+    align-items: center; /* Center the car image */
+    z-index: 5; /* Cars behind lane number */
+  }
+  
+  /* 🏎️ Car Image Styling */
+  .car img {
+    height: 100%; /* Make car image fill car div height */
+    width: auto; /* Width adjusts automatically */
+    object-fit: contain; /* Keep the image fully visible without stretching */
+  }
+  
+  /* 🏁 Finish Line */
+  .finish-line {
+    position: absolute; /* Place at the right side */
+    right: 50px; /* 50px from right edge */
+    height: 100%; /* Full height of track */
+    width: 5px; /* Thin line */
+    background: repeating-linear-gradient(
+      to bottom,
+      #ffffff,
+      #ffffff 10px,
+      #000000 10px,
+      #000000 20px
+    ); /* Striped pattern (white and black) */
+    z-index: 1; /* Behind everything */
+  }
+  
+  /* 📋 Car Information Section (below track) */
+  .car-info {
+    display: flex; /* Flexbox to arrange info */
+    justify-content: space-around; /* Spread evenly */
+    flex-wrap: wrap; /* Wrap into new lines if small screen */
+    gap: 10px; /* Gap between car info */
+  }
+  
+  /* 📝 Individual Car Details */
+  .car-detail {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items */
+    gap: 10px; /* Gap between circle and text */
+  }
+  
+  /* 🎨 Small Colored Circle Representing Car Color */
+  .car-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Circle shape */
+  }
+  
+  /* 🔵 Car 1 Color: Blue Gradient */
+  .car-color-1 {
+    background: linear-gradient(to right, #3498db, #2980b9);
+  }
+  
+  /* ⚫ Car 2 Color: Dark Blue + Yellow */
+  .car-color-2 {
+    background: linear-gradient(to right, #2c3e50, #f1c40f);
+  }
+  
+  /* 🟡 Car 3 Color: Blue + Yellow */
+  .car-color-3 {
+    background: linear-gradient(to right, #3498db, #f1c40f);
+  }
+  
+  /* 🟠 Car 4 Color: Orange + Yellow */
+  .car-color-4 {
+    background: linear-gradient(to right, #e67e22, #f1c40f);
+  }
+  
+  /* 📱 Responsive Design (for smaller screens) */
+  @media (max-width: 768px) {
+    /* Make car info vertical on small devices */
+    .car-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Make tracks and cars smaller */
+    .race-track {
+      height: 60px;
+    }
+  
+    .car {
+      height: 40px;
+    }
+  }
+  
